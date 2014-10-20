@@ -32,6 +32,10 @@ angular.module('app', [
     ($routeProvider) ->
         $routeProvider
             .when(
+                '/tdoc/folder'
+                templateUrl: 'views/tdoc/folder.html'
+            )
+            .when(
                 '/'                                         # dashboard
                 redirectTo: '/dashboard'
             )

@@ -43,7 +43,7 @@ angular.module('app.localization', [])
                     # window.navigator.userLanguage is IE only, and window.navigator.language for the rest.
                     localize.language = ($window.navigator.userLanguage || $window.navigator.language).toLowerCase()
                     localize.language = localize.language.split("-")[0] # get just the language for now
-                return 'i18n/resources-locale_' + localize.language + '.js'
+                return 'i18n/resources-locale_' + localize.language + '.json'
 
             # loads the language resource file from the server
             initLocalizedResources: ->
@@ -113,20 +113,20 @@ angular.module('app.localization', [])
 .controller('LangCtrl', [
     '$scope', 'localize'
     ($scope, localize) ->
-        $scope.lang = 'English'
+        $scope.lang = 'Español'
 
         $scope.setLang = (lang) ->
             switch lang
                 when 'English' then localize.setLanguage('EN-US')
                 when 'Español' then localize.setLanguage('ES-ES')
-                when '日本語' then localize.setLanguage('JA-JP')
-                when '中文' then localize.setLanguage('ZH-TW')
-                when 'Deutsch' then localize.setLanguage('DE-DE')
-                when 'français' then localize.setLanguage('FR-FR')
-                when 'Italiano' then localize.setLanguage('IT-IT')
-                when 'Portugal' then localize.setLanguage('PT-BR')
-                when 'Русский язык' then localize.setLanguage('RU-RU')
-                when '한국어' then localize.setLanguage('KO-KR')
+#                when '日本語' then localize.setLanguage('JA-JP')
+#                when '中文' then localize.setLanguage('ZH-TW')
+#                when 'Deutsch' then localize.setLanguage('DE-DE')
+#                when 'français' then localize.setLanguage('FR-FR')
+#                when 'Italiano' then localize.setLanguage('IT-IT')
+#                when 'Portugal' then localize.setLanguage('PT-BR')
+#                when 'Русский язык' then localize.setLanguage('RU-RU')
+#                when '한국어' then localize.setLanguage('KO-KR')
 
             $scope.lang = lang
 ])
