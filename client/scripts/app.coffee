@@ -25,6 +25,7 @@ angular.module('app', [
     'app.localization'
     'app.chart.ctrls'
     'app.chart.directives'
+    'app.login'
 ])
     
 .config([

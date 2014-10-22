@@ -1,4 +1,4 @@
-<div class="page-signin">
+<div class="page-signin" data-ng-controller="loginCtrl">
 
     <div class="signin-header">
         <div class="container text-center">
@@ -49,7 +49,7 @@
                         <div class="form-group">
                         </div>
                         <div class="form-group">
-                            <a href="#/" class="btn btn-primary btn-lg btn-block">Log in</a>
+                            <a ng-click="dologin()" class="btn btn-primary btn-lg btn-block">Log in</a>
                         </div>
                     </fieldset>
                 </form>
